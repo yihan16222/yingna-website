@@ -11,14 +11,12 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">英钠</span>
-              </div>
-              <div>
-                <div className="text-white font-bold">{COMPANY.name}</div>
-                <div className="text-gray-500 text-xs">{COMPANY.nameEn}</div>
-              </div>
+            <div className="mb-4 inline-flex h-14 w-[180px] items-center overflow-hidden rounded-lg border border-white/10 bg-white px-3 shadow-sm">
+              <img
+                src="/logo-yingna.png"
+                alt={`${COMPANY.name} ${COMPANY.nameEn}`}
+                className="block h-auto w-full"
+              />
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-xs">
               专注于钠离子电池聚阴离子型正极材料研发与产业化，推动新能源材料走向规模化应用。

@@ -27,19 +27,16 @@ export default function Navbar() {
           {/* Logo */}
           <button
             onClick={() => scrollTo('hero')}
-            className="flex min-h-11 items-center gap-3 cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+            className="flex min-h-11 shrink-0 items-center cursor-pointer rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+            aria-label={`${COMPANY.name} 首页`}
           >
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center">
-              <span className="text-white font-bold text-sm tracking-tight">英钠</span>
-            </div>
-            <div className="hidden sm:block">
-              <div className={`font-bold text-base leading-tight transition-colors ${scrolled || menuOpen ? 'text-gray-900' : 'text-white'}`}>
-                {COMPANY.name}
-              </div>
-              <div className={`text-xs transition-colors ${scrolled || menuOpen ? 'text-gray-400' : 'text-blue-200'}`}>
-                {COMPANY.nameEn}
-              </div>
-            </div>
+            <span className="flex h-10 w-[116px] sm:w-[140px] items-center overflow-hidden rounded-md border border-white/70 bg-white px-2 shadow-sm">
+              <img
+                src="/logo-yingna.png"
+                alt={`${COMPANY.name} ${COMPANY.nameEn}`}
+                className="block h-auto w-full"
+              />
+            </span>
           </button>
 
           {/* Desktop Nav */}
