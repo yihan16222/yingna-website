@@ -2,9 +2,9 @@ import { PRODUCTION_FLOW, PRODUCTION_CARDS } from '../data/content'
 
 export default function Production() {
   return (
-    <section id="production" className="py-24 bg-white">
+    <section id="production" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
             产业化能力
           </div>
@@ -15,20 +15,20 @@ export default function Production() {
         </div>
 
         {/* Flow chart */}
-        <div className="mb-16">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 flex-wrap">
+        <div className="mb-10 sm:mb-12 lg:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex items-stretch lg:items-start justify-center gap-3 lg:gap-2 lg:flex-wrap">
             {PRODUCTION_FLOW.map((step, i) => (
               <div key={step} className="flex items-center gap-2">
-                <div className="flex flex-col items-center">
+                <div className="flex w-full items-center gap-3 rounded-xl border border-gray-100 bg-gray-50 p-3 lg:w-auto lg:flex-col lg:gap-0 lg:border-0 lg:bg-transparent lg:p-0">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
                     {i + 1}
                   </div>
-                  <div className="mt-2 text-sm font-medium text-gray-700 text-center whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-700 lg:mt-2 lg:text-center lg:whitespace-nowrap">
                     {step}
                   </div>
                 </div>
                 {i < PRODUCTION_FLOW.length - 1 && (
-                  <svg className="w-5 h-5 text-gray-300 flex-shrink-0 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="hidden lg:block w-5 h-5 text-gray-300 flex-shrink-0 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 )}
@@ -38,7 +38,7 @@ export default function Production() {
         </div>
 
         {/* Capability Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {PRODUCTION_CARDS.map((c) => (
             <div key={c.title} className="card hover:border-cyan-200 hover:-translate-y-1 group">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

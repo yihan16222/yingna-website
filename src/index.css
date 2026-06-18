@@ -3,6 +3,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     margin: 0;
@@ -10,27 +11,60 @@
     -webkit-font-smoothing: antialiased;
     background: #fff;
     color: #1a1a2e;
+    overflow-x: clip;
   }
   #root {
     width: 100%;
     min-height: 100vh;
+    overflow-x: clip;
+  }
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+  img,
+  video {
+    height: auto;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer;
+    @apply inline-flex min-h-11 items-center gap-2 px-5 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 cursor-pointer;
+    @apply inline-flex min-h-11 items-center gap-2 px-5 sm:px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 cursor-pointer;
   }
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
   }
   .section-subtitle {
-    @apply text-gray-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed;
+    color: #6b7280;
+    font-size: clamp(0.95rem, 2vw, 1.125rem);
+    line-height: 1.7;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   .card {
-    @apply bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100;
+    @apply bg-white shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (min-width: 640px) {
+  @layer components {
+    .card {
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+    }
   }
 }

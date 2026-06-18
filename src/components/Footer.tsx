@@ -33,7 +33,7 @@ export default function Footer() {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="block text-sm text-gray-500 hover:text-cyan-400 transition-colors cursor-pointer"
+                  className="block min-h-9 text-left text-sm text-gray-500 hover:text-cyan-400 transition-colors cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -48,7 +48,7 @@ export default function Footer() {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="block text-sm text-gray-500 hover:text-cyan-400 transition-colors cursor-pointer"
+                  className="block min-h-9 text-left text-sm text-gray-500 hover:text-cyan-400 transition-colors cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -57,9 +57,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-gray-600">
           <div>© 2026 {COMPANY.name}. All rights reserved. 具体公司主体待确认。</div>
-          <div className="text-gray-700 text-xs">本页面为演示原型，所有信息仅供参考，请以公司官方发布为准</div>
+          <div className="text-gray-700 text-xs sm:text-right">本页面为演示原型，所有信息仅供参考，请以公司官方发布为准</div>
         </div>
       </div>
     </footer>

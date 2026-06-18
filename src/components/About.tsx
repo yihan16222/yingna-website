@@ -7,9 +7,9 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-24 bg-gray-50">
+    <section id="about" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: Text */}
           <div>
             <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
@@ -30,7 +30,7 @@ export default function About() {
           </div>
 
           {/* Right: Pillars */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             {pillars.map((p) => (
               <div key={p.title} className="card hover:border-blue-200 hover:-translate-y-1">
                 <div className="text-3xl mb-3">{p.icon}</div>

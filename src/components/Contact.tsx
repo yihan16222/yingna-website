@@ -13,9 +13,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
             联系我们
           </div>
@@ -25,7 +25,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10">
+        <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10">
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="card">

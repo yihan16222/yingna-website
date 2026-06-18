@@ -26,25 +26,25 @@ const iconMap: Record<string, React.ReactElement> = {
 
 export default function Applications() {
   return (
-    <section id="applications" className="py-24 bg-gradient-to-br from-[#0a1628] via-[#0d2040] to-[#0a2a3a]">
+    <section id="applications" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#0a1628] via-[#0d2040] to-[#0a2a3a]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <div className="inline-block text-sm font-semibold text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 px-3 py-1 rounded-full mb-4">
             应用场景
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
             面向多元化钠电应用场景
           </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             聚阴离子型正极材料凭借高安全、长寿命、低成本优势，适配钠离子电池多场景规模化应用
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {APPLICATIONS.map((app) => (
             <div
               key={app.title}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:-translate-y-1"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:bg-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white mb-5">
                 {iconMap[app.icon]}

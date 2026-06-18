@@ -2,19 +2,19 @@ import { NEWS } from '../data/content'
 
 export default function News() {
   return (
-    <section id="news" className="py-24 bg-gray-50">
+    <section id="news" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
             新闻动态
           </div>
           <h2 className="section-title">企业动态</h2>
-          <p className="section-subtitle text-yellow-600 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 inline-block mt-2 text-sm">
+          <p className="section-subtitle max-w-full text-yellow-600 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 inline-block mt-2 text-sm">
             以下为占位示例新闻，具体内容、日期、数据请由公司内部提供并确认后替换
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {NEWS.map((item, i) => (
             <div key={i} className="card hover:border-blue-200 hover:-translate-y-1 flex flex-col">
               {/* Placeholder image */}

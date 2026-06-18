@@ -2,9 +2,9 @@ import { JOBS } from '../data/content'
 
 export default function Careers() {
   return (
-    <section id="careers" className="py-24 bg-white">
+    <section id="careers" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Left */}
           <div>
             <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
@@ -35,7 +35,7 @@ export default function Careers() {
               {JOBS.map((job) => (
                 <div
                   key={job.title}
-                  className="flex items-center justify-between p-4 rounded-xl border border-gray-100 bg-gray-50 hover:border-blue-200 hover:bg-blue-50/50 transition-all duration-200 group"
+                  className="flex flex-col gap-3 p-4 rounded-xl border border-gray-100 bg-gray-50 hover:border-blue-200 hover:bg-blue-50/50 transition-all duration-200 group sm:flex-row sm:items-center sm:justify-between"
                 >
                   <div>
                     <div className="font-semibold text-gray-900 group-hover:text-blue-700 transition-colors">

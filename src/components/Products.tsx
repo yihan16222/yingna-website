@@ -21,9 +21,9 @@ const iconMap: Record<string, React.ReactElement> = {
 
 export default function Products() {
   return (
-    <section id="products" className="py-24 bg-white">
+    <section id="products" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
           <div className="inline-block text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4">
             技术与产品
           </div>
@@ -34,7 +34,7 @@ export default function Products() {
         </div>
 
         {/* Product Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 mb-12 sm:mb-16 lg:mb-20">
           {PRODUCTS.map((p) => (
             <div key={p.title} className="card group hover:border-blue-200 hover:-translate-y-1">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform">
@@ -57,10 +57,10 @@ export default function Products() {
         </div>
 
         {/* Tech Highlights */}
-        <div className="bg-gradient-to-br from-[#0a1628] to-[#0d2040] rounded-3xl p-8 lg:p-12">
+        <div className="bg-gradient-to-br from-[#0a1628] to-[#0d2040] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12">
           <h3 className="text-xl font-bold text-white mb-2 text-center">技术亮点</h3>
-          <p className="text-gray-400 text-center mb-10 text-sm">聚阴离子型正极材料核心优势</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <p className="text-gray-400 text-center mb-6 sm:mb-10 text-sm">聚阴离子型正极材料核心优势</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             {TECH_HIGHLIGHTS.map((h) => (
               <div key={h.label} className="flex items-start gap-4 bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
                 <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0" />

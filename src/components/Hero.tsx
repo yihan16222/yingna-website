@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d2040] to-[#0a2a3a]"
+      className="relative flex min-h-[680px] flex-col justify-center overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d2040] to-[#0a2a3a] sm:min-h-[720px] lg:min-h-screen"
     >
       {/* Background grid pattern */}
       <div className="absolute inset-0 opacity-20">
@@ -70,43 +70,43 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-24">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-sm font-medium mb-8">
+          <div className="inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
             钠离子电池正极材料研发与产业化
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
             {COMPANY.name}
           </h1>
-          <p className="text-xl sm:text-2xl text-cyan-400 font-semibold mb-6">
+          <p className="text-lg sm:text-2xl text-cyan-400 font-semibold mb-5 sm:mb-6">
             {COMPANY.tagline}
           </p>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-10 max-w-2xl">
+          <p className="text-gray-300 text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl">
             {COMPANY.description}
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button onClick={() => scrollTo('products')} className="btn-primary">
+          <div className="flex max-w-md flex-col gap-3 min-[430px]:flex-row sm:gap-4">
+            <button onClick={() => scrollTo('products')} className="btn-primary w-full justify-center min-[430px]:w-auto">
               了解产品技术
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-            <button onClick={() => scrollTo('contact')} className="btn-outline">
+            <button onClick={() => scrollTo('contact')} className="btn-outline w-full justify-center min-[430px]:w-auto">
               联系合作
             </button>
           </div>
         </div>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:mt-16 sm:gap-4 lg:mt-20 lg:grid-cols-4">
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 hover:bg-white/10 transition-colors"
             >
               <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-gray-400 text-xs sm:text-sm leading-snug">{stat.label}</div>
@@ -116,7 +116,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 text-xs animate-bounce">
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-gray-500 text-xs animate-bounce sm:flex">
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
         </svg>
